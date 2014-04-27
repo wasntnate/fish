@@ -226,4 +226,6 @@ main <- function(){
   #Appropriately labels the data set with descriptive activity names. 
   
   #Creates a second, independent tidy data set with the average of each variable for each activity and each subject.   
+  t = merge(ds$trainset$signals$bodyacc$X,ds$trainset$signals$bodyacc$Y)
+  write.table(t, file="tidy.txt")
 }
